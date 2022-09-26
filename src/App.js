@@ -45,7 +45,7 @@ function App() {
     <MantineProvider>
       <Box
         sx={(theme) => ({
-          backgroundColor: theme.colors.indigo[0],
+          backgroundColor: "#e1ebeb",
           width: "100vw",
           height: "100vh",
           display: "flex",
@@ -59,7 +59,6 @@ function App() {
             paddingBottom: theme.spacing.md,
           })}
           order={1}
-          color="teal.9"
         >
           Email Signature
         </Title>
@@ -157,7 +156,11 @@ function App() {
           </div>
         </Center>
 
-        <Button color={copied ? "teal" : "indigo"} onClick={copy}>
+        <Button
+          color={copied ? "teal" : "yellow"}
+          style={{ color: "black" }}
+          onClick={copy}
+        >
           {copied ? (
             <span
               style={{

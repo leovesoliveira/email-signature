@@ -28,7 +28,7 @@ function Generate() {
     <MantineProvider>
       <Box
         sx={(theme) => ({
-          backgroundColor: theme.colors.indigo[0],
+          backgroundColor: "#e1ebeb",
           width: "100vw",
           height: "100vh",
           display: "flex",
@@ -42,7 +42,6 @@ function Generate() {
             paddingBottom: theme.spacing.md,
           })}
           order={1}
-          color="teal.9"
         >
           Generate Email Signature
         </Title>
@@ -132,7 +131,11 @@ function Generate() {
 
         <CopyButton value={url}>
           {({ copied, copy }) => (
-            <Button color={copied ? "teal" : "indigo"} onClick={copy}>
+            <Button
+              color={copied ? "teal" : "yellow"}
+              style={{ color: "black" }}
+              onClick={copy}
+            >
               {copied ? (
                 <span
                   style={{

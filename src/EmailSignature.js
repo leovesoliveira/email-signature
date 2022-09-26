@@ -16,14 +16,14 @@ function EmailSignature({
       <thead>
         <tr>
           <th className="username">
-            <big className="bold">{name}</big>
+            <big style={{ fontWeight: "bold" }}>{name}</big>
             <br />
-            <small>{job}</small>
+            <small style={{ fontWeight: "normal" }}>{job}</small>
             <br />
             <br />
-            <small>{line1}</small>
+            <small style={{ fontWeight: "normal" }}>{line1}</small>
             <br />
-            <small>{line2}</small>
+            <small style={{ fontWeight: "normal" }}>{line2}</small>
           </th>
           <th>
             <a href={logoLink} target="_blank" rel="noreferrer">

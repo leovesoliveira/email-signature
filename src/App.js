@@ -20,10 +20,16 @@ function App() {
 
   const url_string = window.location.href;
   const url = new URL(url_string);
-  const { bannerLink, bannerImg, logoLink, logoImg, linkedinLink } =
-    url.searchParams.get("data")
-      ? JSON.parse(atob(url.searchParams.get("data")))
-      : {};
+  const {
+    bannerLink,
+    bannerImg,
+    logoLink,
+    logoImg,
+    linkedinLink,
+    linkedinImg,
+  } = url.searchParams.get("data")
+    ? JSON.parse(atob(url.searchParams.get("data")))
+    : {};
 
   const emailSignatureRef = createRef();
 
@@ -152,6 +158,7 @@ function App() {
               logoLink={logoLink}
               logoImg={logoImg}
               linkedinLink={linkedinLink}
+              linkedinImg={linkedinImg}
             />
           </div>
         </Center>

@@ -15,14 +15,22 @@ function Generate() {
   const [bannerLink, setBannerLink] = useState("");
   const [bannerImg, setBannerImg] = useState("");
   const [linkedinLink, setLinkedinLink] = useState("");
+  const [linkedinImg, setLinkedinImg] = useState("");
 
   const [url, setUrl] = useState("");
 
   useEffect(() => {
-    const data = { logoLink, logoImg, bannerLink, bannerImg, linkedinLink };
+    const data = {
+      logoLink,
+      logoImg,
+      bannerLink,
+      bannerImg,
+      linkedinLink,
+      linkedinImg,
+    };
     const dataStringBase64 = btoa(JSON.stringify(data));
     setUrl(`${window.location.origin}?data=${dataStringBase64}`);
-  }, [logoLink, logoImg, bannerLink, bannerImg, linkedinLink]);
+  }, [logoLink, logoImg, bannerLink, bannerImg, linkedinLink, linkedinImg]);
 
   return (
     <MantineProvider>
@@ -116,7 +124,7 @@ function Generate() {
           <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
-              paddingBottom: theme.spacing.xl,
+              paddingBottom: theme.spacing.sm,
             })}
             id="linkedinLink"
             label="LinkedIn Link"
@@ -125,6 +133,21 @@ function Generate() {
               id="linkedinLink"
               value={linkedinLink}
               onChange={(e) => setLinkedinLink(e.target.value)}
+            />
+          </Input.Wrapper>
+
+          <Input.Wrapper
+            sx={(theme) => ({
+              width: "100%",
+              paddingBottom: theme.spacing.xl,
+            })}
+            id="linkedinImg"
+            label="LinkedIn Image"
+          >
+            <Input
+              id="linkedinImg"
+              value={linkedinImg}
+              onChange={(e) => setLinkedinImg(e.target.value)}
             />
           </Input.Wrapper>
         </Box>

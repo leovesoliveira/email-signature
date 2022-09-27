@@ -47,7 +47,7 @@ function Generate() {
       >
         <Title
           sx={(theme) => ({
-            paddingBottom: theme.spacing.md,
+            paddingBottom: theme.spacing.xs,
           })}
           order={1}
         >
@@ -56,7 +56,7 @@ function Generate() {
 
         <Box
           sx={(theme) => ({
-            width: "658px",
+            width: "634px",
             display: "flex",
             flexWrap: "wrap",
           })}
@@ -64,7 +64,6 @@ function Generate() {
           <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
-              paddingBottom: theme.spacing.sm,
             })}
             id="logoLink"
             label="Logo Link"
@@ -79,7 +78,6 @@ function Generate() {
           <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
-              paddingBottom: theme.spacing.sm,
             })}
             id="logoImg"
             label="Logo Image"
@@ -94,7 +92,6 @@ function Generate() {
           <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
-              paddingBottom: theme.spacing.sm,
             })}
             id="bannerLink"
             label="Banner Link"
@@ -109,7 +106,6 @@ function Generate() {
           <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
-              paddingBottom: theme.spacing.sm,
             })}
             id="bannerImg"
             label="Banner Image"
@@ -124,7 +120,6 @@ function Generate() {
           <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
-              paddingBottom: theme.spacing.sm,
             })}
             id="linkedinLink"
             label="LinkedIn Link"
@@ -139,7 +134,7 @@ function Generate() {
           <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
-              paddingBottom: theme.spacing.xl,
+              paddingBottom: theme.spacing.sm,
             })}
             id="linkedinImg"
             label="LinkedIn Image"

@@ -62,7 +62,7 @@ function App() {
       >
         <Title
           sx={(theme) => ({
-            paddingBottom: theme.spacing.md,
+            paddingBottom: theme.spacing.xs,
           })}
           order={1}
         >
@@ -71,7 +71,7 @@ function App() {
 
         <Box
           sx={(theme) => ({
-            width: "658px",
+            width: "634px",
             display: "flex",
             flexWrap: "wrap",
           })}
@@ -79,7 +79,6 @@ function App() {
           <Input.Wrapper
             sx={(theme) => ({
               width: "22rem",
-              paddingBottom: theme.spacing.sm,
               paddingRight: theme.spacing.sm,
             })}
             id="name"
@@ -94,8 +93,7 @@ function App() {
 
           <Input.Wrapper
             sx={(theme) => ({
-              width: "18.3rem",
-              paddingBottom: theme.spacing.sm,
+              width: "16.8rem",
             })}
             id="job-description"
             label="Job Description"
@@ -110,7 +108,6 @@ function App() {
           <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
-              paddingBottom: theme.spacing.sm,
             })}
             id="line-1"
             label="Line 1"
@@ -125,7 +122,7 @@ function App() {
           <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
-              paddingBottom: theme.spacing.xl,
+              paddingBottom: theme.spacing.sm,
             })}
             id="line-2"
             label="Line 2"
@@ -141,10 +138,10 @@ function App() {
         <Center
           sx={(theme) => ({
             backgroundColor: "white",
-            padding: theme.spacing.xl,
+            padding: "0.1rem 0.75rem",
             borderRadius: theme.radius.md,
             boxShadow: theme.shadows.md,
-            marginBottom: theme.spacing.xl,
+            marginBottom: theme.spacing.sm,
           })}
         >
           <div ref={emailSignatureRef}>

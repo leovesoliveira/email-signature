@@ -163,7 +163,7 @@ function Generate() {
                   }}
                 >
                   <IconCheck size={16} />
-                  <span style={{ marginLeft: "0.5rem" }}>Copied</span>
+                  <span style={{ marginLeft: "0.5rem" }}>Generated</span>
                 </span>
               ) : (
                 <span
@@ -175,7 +175,7 @@ function Generate() {
                 >
                   <IconCopy size={16} />
                   <span style={{ marginLeft: "0.5rem" }}>
-                    Copy Link to Email Signature
+                    Generate Link to Email Signature
                   </span>
                 </span>
               )}

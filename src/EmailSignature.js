@@ -31,6 +31,8 @@ function EmailSignature({
               <img
                 className="logo"
                 alt="Logo"
+                width="160"
+                height="50"
                 src={logoImg || "#"}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null; // prevents looping
@@ -44,6 +46,8 @@ function EmailSignature({
               <img
                 className="linkedin_logo"
                 alt="LinkedIn Logo"
+                width="32"
+                height="32"
                 src={linkedinImg || "#"}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null; // prevents looping
@@ -61,6 +65,8 @@ function EmailSignature({
               <img
                 className="banner_img"
                 alt="Banner"
+                width="600"
+                height="84"
                 src={bannerImg || "#"}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null; // prevents looping

@@ -28,15 +28,27 @@ function EmailSignature({
           </th>
           <th>
             <a href={logoLink} target="_blank" rel="noreferrer">
-              <img className="logo" alt="Logo" src={logoImg} />
+              <img
+                className="logo"
+                alt="Logo"
+                src={logoImg || "#"}
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.src = "https://via.placeholder.com/160x50";
+                }}
+              />
             </a>
           </th>
           <th>
             <a href={linkedinLink} target="_blank" rel="noreferrer">
               <img
-                class="linkedin_logo"
+                className="linkedin_logo"
                 alt="LinkedIn Logo"
-                src={linkedinImg}
+                src={linkedinImg || "#"}
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.src = "https://via.placeholder.com/32x32";
+                }}
               />
             </a>
           </th>
@@ -46,7 +58,15 @@ function EmailSignature({
         <tr>
           <td className="banner" colSpan="3">
             <a href={bannerLink} target="_blank" rel="noreferrer">
-              <img className="banner_img" alt="Banner" src={bannerImg} />
+              <img
+                className="banner_img"
+                alt="Banner"
+                src={bannerImg || "#"}
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.src = "https://via.placeholder.com/600x84";
+                }}
+              />
             </a>
           </td>
         </tr>

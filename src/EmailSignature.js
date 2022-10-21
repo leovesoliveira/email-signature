@@ -1,4 +1,5 @@
 import "./EmailSignature.css";
+import { getValidUrl } from "./getValidUrl";
 
 function EmailSignature({
   name,
@@ -27,7 +28,7 @@ function EmailSignature({
             <small style={{ fontWeight: "normal" }}>{line2}</small>
           </th>
           <th>
-            <a href={logoLink} target="_blank" rel="noreferrer">
+            <a href={getValidUrl(logoLink)} target="_blank" rel="noreferrer">
               <img
                 className="logo"
                 alt="Logo"
@@ -42,7 +43,11 @@ function EmailSignature({
             </a>
           </th>
           <th>
-            <a href={linkedinLink} target="_blank" rel="noreferrer">
+            <a
+              href={getValidUrl(linkedinLink)}
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className="linkedin_logo"
                 alt="LinkedIn Logo"
@@ -61,7 +66,7 @@ function EmailSignature({
       <tbody>
         <tr>
           <td className="banner" colSpan="3">
-            <a href={bannerLink} target="_blank" rel="noreferrer">
+            <a href={getValidUrl(bannerLink)} target="_blank" rel="noreferrer">
               <img
                 className="banner_img"
                 alt="Banner"

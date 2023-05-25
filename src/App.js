@@ -23,6 +23,8 @@ function App() {
   const {
     bannerLink,
     bannerImg,
+    bannerSmallLink,
+    bannerSmallImg,
     logoLink,
     logoImg,
     linkedinLink,
@@ -152,6 +154,8 @@ function App() {
               line2={line2}
               bannerLink={bannerLink}
               bannerImg={bannerImg}
+              bannerSmallLink={bannerSmallLink}
+              bannerSmallImg={bannerSmallImg}
               logoLink={logoLink}
               logoImg={logoImg}
               linkedinLink={linkedinLink}

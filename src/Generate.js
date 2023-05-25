@@ -14,6 +14,8 @@ function Generate() {
   const [logoImg, setLogoImg] = useState("");
   const [bannerLink, setBannerLink] = useState("");
   const [bannerImg, setBannerImg] = useState("");
+  const [bannerSmallLink, setBannerSmallLink] = useState("");
+  const [bannerSmallImg, setBannerSmallImg] = useState("");
   const [linkedinLink, setLinkedinLink] = useState("");
   const [linkedinImg, setLinkedinImg] = useState("");
 
@@ -25,12 +27,14 @@ function Generate() {
       logoImg,
       bannerLink,
       bannerImg,
+      bannerSmallLink,
+      bannerSmallImg,
       linkedinLink,
       linkedinImg,
     };
     const dataStringBase64 = btoa(JSON.stringify(data));
     setUrl(`${window.location.origin}?data=${dataStringBase64}`);
-  }, [logoLink, logoImg, bannerLink, bannerImg, linkedinLink, linkedinImg]);
+  }, [logoLink, logoImg, bannerLink, bannerImg, bannerSmallLink, bannerSmallImg, linkedinLink, linkedinImg]);
 
   return (
     <MantineProvider>
@@ -80,7 +84,7 @@ function Generate() {
               width: "100%",
             })}
             id="logoImg"
-            label="Logo Image"
+            label="Logo Image (160x50px)"
           >
             <Input
               id="logoImg"
@@ -108,13 +112,41 @@ function Generate() {
               width: "100%",
             })}
             id="bannerImg"
-            label="Banner Image"
+            label="Banner Image (600x84px)"
           >
             <Input
               id="bannerImg"
               value={bannerImg}
               onChange={(e) => setBannerImg(e.target.value)}
             />
+          </Input.Wrapper>
+
+          <Input.Wrapper
+              sx={(theme) => ({
+                  width: "100%",
+              })}
+              id="bannerSmallLink"
+              label="Small Banner Link"
+          >
+              <Input
+                  id="bannerSmallLink"
+                  value={bannerSmallLink}
+                  onChange={(e) => setBannerSmallLink(e.target.value)}
+              />
+          </Input.Wrapper>
+
+          <Input.Wrapper
+              sx={(theme) => ({
+                  width: "100%",
+              })}
+              id="bannerSmallImg"
+              label="Small Banner Image (320x32px)"
+          >
+              <Input
+                  id="bannerSmallImg"
+                  value={bannerSmallImg}
+                  onChange={(e) => setBannerSmallImg(e.target.value)}
+              />
           </Input.Wrapper>
 
           <Input.Wrapper
@@ -137,7 +169,7 @@ function Generate() {
               paddingBottom: theme.spacing.sm,
             })}
             id="linkedinImg"
-            label="LinkedIn Image"
+            label="LinkedIn Image (32x32px)"
           >
             <Input
               id="linkedinImg"

@@ -8,6 +8,8 @@ function EmailSignature({
   line2,
   bannerLink,
   bannerImg,
+  bannerSmallLink,
+  bannerSmallImg,
   logoLink,
   logoImg,
   linkedinLink,
@@ -77,6 +79,24 @@ function EmailSignature({
                   currentTarget.onerror = null; // prevents looping
                   currentTarget.src = "https://via.placeholder.com/600x84";
                 }}
+              />
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td className="banner" colSpan="3">
+            <a href={getValidUrl(bannerSmallLink)} target="_blank" rel="noreferrer">
+              <img
+                  className="banner_img"
+                  alt="Banner"
+                  width="320"
+                  height="32"
+                  src={bannerSmallImg || "#"}
+                  onError={({ currentTarget }) => {
+                    currentTarget.onerror = null; // prevents looping
+                    currentTarget.src = "https://via.placeholder.com/320x32";
+                  }}
               />
             </a>
           </td>

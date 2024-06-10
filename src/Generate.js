@@ -3,31 +3,31 @@ import { IconCheck, IconCopy } from "@tabler/icons";
 import { useEffect, useState } from "react";
 
 function Generate() {
-  const [logoLink, setLogoLink] = useState("");
-  const [logoImg, setLogoImg] = useState("");
+  // const [logoLink, setLogoLink] = useState("");
+  // const [logoImg, setLogoImg] = useState("");
   const [bannerLink, setBannerLink] = useState("");
   const [bannerImg, setBannerImg] = useState("");
   const [bannerSmallLink, setBannerSmallLink] = useState("");
   const [bannerSmallImg, setBannerSmallImg] = useState("");
-  const [linkedinLink, setLinkedinLink] = useState("");
-  const [linkedinImg, setLinkedinImg] = useState("");
+  // const [linkedinLink, setLinkedinLink] = useState("");
+  // const [linkedinImg, setLinkedinImg] = useState("");
 
   const [url, setUrl] = useState("");
 
   useEffect(() => {
     const data = {
-      logoLink,
-      logoImg,
+      // logoLink,
+      // logoImg,
       bannerLink,
       bannerImg,
       bannerSmallLink,
       bannerSmallImg,
-      linkedinLink,
-      linkedinImg,
+      // linkedinLink,
+      // linkedinImg,
     };
     const dataStringBase64 = btoa(JSON.stringify(data));
     setUrl(`${window.location.origin}?data=${dataStringBase64}`);
-  }, [logoLink, logoImg, bannerLink, bannerImg, bannerSmallLink, bannerSmallImg, linkedinLink, linkedinImg]);
+  }, [bannerLink, bannerImg, bannerSmallLink, bannerSmallImg]);
 
   return (
     <MantineProvider>

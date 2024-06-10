@@ -10,10 +10,10 @@ function EmailSignature({
   bannerImg,
   bannerSmallLink,
   bannerSmallImg,
-  logoLink,
-  logoImg,
-  linkedinLink,
-  linkedinImg,
+  // logoLink,
+  // logoImg,
+  // linkedinLink,
+  // linkedinImg,
 }) {
   return (
     <table className="tg">

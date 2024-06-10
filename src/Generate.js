@@ -56,6 +56,7 @@ function Generate() {
             width: "634px",
             display: "flex",
             flexWrap: "wrap",
+            paddingBottom: theme.spacing.sm,
           })}
         >
           {/* <Input.Wrapper

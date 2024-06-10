@@ -29,7 +29,7 @@ function EmailSignature({
             <br />
             <small style={{ fontWeight: "normal" }}>{line2}</small>
           </th>
-          <th>
+          {/* <th>
             <a href={getValidUrl(logoLink)} target="_blank" rel="noreferrer">
               <img
                 className="logo"
@@ -62,7 +62,7 @@ function EmailSignature({
                 }}
               />
             </a>
-          </th>
+          </th> */}
         </tr>
       </thead>
       <tbody>
@@ -88,15 +88,15 @@ function EmailSignature({
           <td className="banner" colSpan="3">
             <a href={getValidUrl(bannerSmallLink)} target="_blank" rel="noreferrer">
               <img
-                  className="banner_img"
-                  alt="Banner"
-                  width="320"
-                  height="32"
-                  src={bannerSmallImg || "#"}
-                  onError={({ currentTarget }) => {
-                    currentTarget.onerror = null; // prevents looping
-                    currentTarget.src = "https://via.placeholder.com/320x32";
-                  }}
+                className="banner_img"
+                alt="Banner"
+                width="320"
+                height="32"
+                src={bannerSmallImg || "#"}
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.src = "https://via.placeholder.com/320x32";
+                }}
               />
             </a>
           </td>

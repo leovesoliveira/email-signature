@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  CopyButton,
-  Input,
-  MantineProvider,
-  Title,
-} from "@mantine/core";
+import { Box, Button, CopyButton, Input, MantineProvider, Title } from "@mantine/core";
 import { IconCheck, IconCopy } from "@tabler/icons";
 import { useEffect, useState } from "react";
 
@@ -65,7 +58,7 @@ function Generate() {
             flexWrap: "wrap",
           })}
         >
-          <Input.Wrapper
+          {/* <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
             })}
@@ -91,7 +84,7 @@ function Generate() {
               value={logoImg}
               onChange={(e) => setLogoImg(e.target.value)}
             />
-          </Input.Wrapper>
+          </Input.Wrapper> */}
 
           <Input.Wrapper
             sx={(theme) => ({
@@ -100,11 +93,7 @@ function Generate() {
             id="bannerLink"
             label="Banner Link"
           >
-            <Input
-              id="bannerLink"
-              value={bannerLink}
-              onChange={(e) => setBannerLink(e.target.value)}
-            />
+            <Input id="bannerLink" value={bannerLink} onChange={(e) => setBannerLink(e.target.value)} />
           </Input.Wrapper>
 
           <Input.Wrapper
@@ -114,42 +103,30 @@ function Generate() {
             id="bannerImg"
             label="Banner Image (600x84px)"
           >
-            <Input
-              id="bannerImg"
-              value={bannerImg}
-              onChange={(e) => setBannerImg(e.target.value)}
-            />
+            <Input id="bannerImg" value={bannerImg} onChange={(e) => setBannerImg(e.target.value)} />
           </Input.Wrapper>
 
           <Input.Wrapper
-              sx={(theme) => ({
-                  width: "100%",
-              })}
-              id="bannerSmallLink"
-              label="Small Banner Link"
+            sx={(theme) => ({
+              width: "100%",
+            })}
+            id="bannerSmallLink"
+            label="Small Banner Link"
           >
-              <Input
-                  id="bannerSmallLink"
-                  value={bannerSmallLink}
-                  onChange={(e) => setBannerSmallLink(e.target.value)}
-              />
+            <Input id="bannerSmallLink" value={bannerSmallLink} onChange={(e) => setBannerSmallLink(e.target.value)} />
           </Input.Wrapper>
 
           <Input.Wrapper
-              sx={(theme) => ({
-                  width: "100%",
-              })}
-              id="bannerSmallImg"
-              label="Small Banner Image (320x32px)"
+            sx={(theme) => ({
+              width: "100%",
+            })}
+            id="bannerSmallImg"
+            label="Small Banner Image (320x32px)"
           >
-              <Input
-                  id="bannerSmallImg"
-                  value={bannerSmallImg}
-                  onChange={(e) => setBannerSmallImg(e.target.value)}
-              />
+            <Input id="bannerSmallImg" value={bannerSmallImg} onChange={(e) => setBannerSmallImg(e.target.value)} />
           </Input.Wrapper>
 
-          <Input.Wrapper
+          {/* <Input.Wrapper
             sx={(theme) => ({
               width: "100%",
             })}
@@ -176,16 +153,12 @@ function Generate() {
               value={linkedinImg}
               onChange={(e) => setLinkedinImg(e.target.value)}
             />
-          </Input.Wrapper>
+          </Input.Wrapper> */}
         </Box>
 
         <CopyButton value={url}>
           {({ copied, copy }) => (
-            <Button
-              color={copied ? "teal" : "yellow"}
-              style={{ color: "black" }}
-              onClick={copy}
-            >
+            <Button color={copied ? "teal" : "yellow"} style={{ color: "black" }} onClick={copy}>
               {copied ? (
                 <span
                   style={{
@@ -206,9 +179,7 @@ function Generate() {
                   }}
                 >
                   <IconCopy size={16} />
-                  <span style={{ marginLeft: "0.5rem" }}>
-                    Generate Link to Email Signature
-                  </span>
+                  <span style={{ marginLeft: "0.5rem" }}>Generate Link to Email Signature</span>
                 </span>
               )}
             </Button>
